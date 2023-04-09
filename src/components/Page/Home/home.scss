@@ -19,8 +19,21 @@
   &__title {
     font-size: 3.2rem;
     text-align: center;
+    padding-bottom: 2.4rem;
     @include breakpoint(md) {
+      padding-bottom: 3.2rem;
       font-size: 5rem;
+    }
+  }
+
+  &__dentist {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @include breakpoint(md) {
+      justify-content: space-evenly;
+      padding: 5px;
     }
   }
 }

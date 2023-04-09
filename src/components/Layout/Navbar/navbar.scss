@@ -15,7 +15,7 @@
     max-width: 120rem;
     margin: 0 auto;
     background-color: transparent;
-    padding: 1rem;
+    padding: 1rem 0;
 
     @include breakpoint(md) {
       justify-content: space-between;
@@ -35,6 +35,7 @@
 
     ul {
       display: flex;
+      align-items: center;
       height: 100%;
       gap: 0.5rem;
       background-color: transparent;
@@ -44,6 +45,13 @@
       list-style: none;
       height: 100%;
       background-color: transparent;
+    }
+    .MuiFormControlLabel-root {
+      margin: 0;
+
+      span {
+        margin: 0;
+      }
     }
 
     .navbar__menu {

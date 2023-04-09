@@ -1,8 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Navbar } from "./components/Layout/Navbar/Navbar";
 import { HomeContainer } from "./components/Page/Home/Home.container";
-import { DentistContainer } from "./components/Page/Denstist/Dentist.container";
+import { DentistDetailContainer } from "./components/Page/DenstistDetail/DentistDetail.container";
 import { ContactContainer } from "./components/Page/Contact/Contact.container";
 import { FavoritesContainer } from "./components/Page/Favorites/Favorites.container";
 import { Welcome } from "./components/Page/Welcome/Welcome";
@@ -21,7 +20,7 @@ function App() {
             {/* profesional */}
             <Route path="/home" element={<HomeContainer />} />
 
-            {/* <Route path="/dentist/:id" element={<DentistContainer />} /> */}
+            <Route path="/dentist/:id" element={<DentistDetailContainer />} />
             <Route path="/contacto" element={<ContactContainer />} />
             <Route path="/favs" element={<FavoritesContainer />} />
           </Route>

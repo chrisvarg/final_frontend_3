@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.scss";
-import { Card } from "../../common/Card";
+import { Card } from "../../common/Card/Card";
 /**
  *usar users de la API
  * 2/22 => 51 min
