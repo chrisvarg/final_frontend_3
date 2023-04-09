@@ -1,0 +1,26 @@
+@import "../../../css/sass/base/mixins";
+
+.home {
+  background-color: #737373;
+  &__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 3.2rem;
+
+    @include breakpoint(md) {
+      padding-top: 5rem;
+      justify-content: space-between;
+      width: 80%;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    text-align: center;
+    @include breakpoint(md) {
+      font-size: 5rem;
+    }
+  }
+}
