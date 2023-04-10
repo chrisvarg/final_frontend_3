@@ -13,5 +13,12 @@ export const HomeContainer = () => {
   }, []);
 
   // console.log(state.users);
-  return <Home dentists={state.users} />;
+  return (
+    <Home
+      dentists={state.users}
+      isDark={state.isDark}
+      dispatch={dispatch}
+      favs={state.favs}
+    />
+  );
 };

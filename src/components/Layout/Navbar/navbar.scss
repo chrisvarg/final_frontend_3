@@ -1,8 +1,8 @@
 @import "../../../css/sass/base/mixins";
 
 .navbar {
-  box-shadow: 0px 0px 10px 0px rgb(255, 255, 255, 0.3);
-  background-color: #242424;
+  background-color: #ee1740;
+  box-shadow: 0px 0px 10px 0px rgb(203, 25, 25, 0.9);
   position: relative;
 
   &__container {
@@ -63,12 +63,16 @@
         padding: 1rem;
         font-size: 1.6rem;
       }
+
+      &:hover {
+        color: #242424;
+      }
     }
     .active {
       background-color: transparent;
       display: block;
       padding: 0.5rem;
-      color: #ee1740;
+      color: #242424;
       position: relative;
       font-size: 1.6rem;
 
@@ -81,12 +85,30 @@
         position: absolute;
         height: 3px;
         width: 78%;
-        background: #ee1740;
+        background: #242424;
         content: "";
         bottom: 19%;
         right: 0;
         left: 11%;
       }
     }
+  }
+}
+.navbar.dark {
+  background-color: #242424;
+  box-shadow: 0px 0px 10px 0px rgb(36, 36, 36, 0.9);
+
+  .navbar__menu {
+    color: white;
+    &:hover {
+      color: #ee1740;
+    }
+  }
+  .active {
+    color: #ee1740;
+  }
+
+  .active::after {
+    background-color: #ee1740;
   }
 }

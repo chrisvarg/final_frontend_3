@@ -1,0 +1,82 @@
+@import "../../../css/sass/base/mixins";
+
+.footer {
+  background-color: #ee1740;
+  margin-top: 40px;
+
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 1rem 0;
+
+    @include breakpoint(md) {
+      justify-content: space-between;
+      width: 80%;
+      padding: 2rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__header {
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__company {
+    width: 100%;
+    .company {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__image {
+        width: 50px;
+        img {
+          width: 100%;
+        }
+      }
+
+      &__list {
+        display: flex;
+        gap: 20px;
+      }
+      &__items {
+        width: 30px;
+        list-style: none;
+
+        a {
+          display: inline-block;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.footer.dark {
+  background-color: #242424;
+  box-shadow: 0px 0px 10px 0px rgb(36, 36, 36, 0.9);
+
+  .navbar__menu {
+    color: white;
+    &:hover {
+      color: #ee1740;
+    }
+  }
+  .active {
+    color: #ee1740;
+  }
+
+  .active::after {
+    background-color: #ee1740;
+  }
+}

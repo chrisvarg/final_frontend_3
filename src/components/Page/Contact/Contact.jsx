@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import "./contact.scss";
 import { MessageError } from "../../common/Messages/MessageError";
+import { GlobalContext } from "../../../Context/GlobalContext";
 
 export const Contact = ({
   handleChange,
@@ -10,15 +11,17 @@ export const Contact = ({
   dataValidate,
   setDataValidate,
 }) => {
+  const { state } = useContext(GlobalContext);
+
   useEffect(() => {
     setIsError(false);
     setDataValidate(true);
   }, []);
 
   return (
-    <div className="contact">
+    <div className={state.isDark ? "home dark" : "home"}>
       <div className="contact__container">
-        <h2 className="contact__title">Want to know more?</h2>
+        <h1 className="contact__title">Want to know more?</h1>
         <p className="contact__text">
           Send us your questions and we will contact you
         </p>

@@ -1,8 +1,6 @@
 @import "../../../css/sass/base/mixins";
 
 .dentist {
-  background-color: gray;
-
   &__container {
     display: flex;
     flex-direction: column;
@@ -25,6 +23,7 @@
     font-size: 3.2rem;
     text-align: center;
     padding-bottom: 2.4rem;
+    color: black;
     @include breakpoint(md) {
       padding-bottom: 3.2rem;
       font-size: 5rem;
@@ -115,6 +114,17 @@
           text-align: center;
         }
       }
+    }
+  }
+  .dark {
+    background-color: #737373;
+
+    h1 {
+      color: white;
+    }
+
+    p {
+      color: white;
     }
   }
 }

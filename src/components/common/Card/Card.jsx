@@ -2,22 +2,20 @@ import { Avatar, Button, CardActions, IconButton } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import "./card.scss";
 
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { GlobalContext } from "../../../Context/GlobalContext";
 
-export const Card = ({ data }) => {
+export const Card = ({ data, dispatch, favs }) => {
   console.log(data);
 
-  const selectFavorite = (e) => {
-    const element = e.target;
-    if (element.src.includes("_unselect")) {
-      console.log((element.src = element.src.replace("_unselect", "")));
-      return;
-    }
-
-    element.src = element.src.replace("favorite", "favorite_unselect");
-    return;
+  const selectFavorite = () => {
+    return favs.some((fav) => fav.id === data.id)
+      ? "./src/assets/favorite.svg"
+      : `./src/assets/favorite_unselect.svg`;
   };
+
+  console.log(selectFavorite());
 
   return (
     <div className="card">
@@ -39,28 +37,16 @@ export const Card = ({ data }) => {
         </div>
       </Link>
       <div className="card__detail">
-        <figure className="card__favs" onClick={selectFavorite}>
-          <img src={`./src/assets/favorite${"_unselect"}.svg`} alt="" />
+        <figure className="card__favs">
+          <img
+            src={selectFavorite()}
+            onClick={() => dispatch({ type: "HANDLE_FAVORITE", payload: data })}
+          />
         </figure>
         <Link to={`/dentist/${data.id}`}>
           <button>Ver detalles</button>
         </Link>
       </div>
-      {/* <CardActions disableSpacing>
-        <IconButton
-          aria-label="add to favorites"
-          // onClick={() => dispatch({ type: "HANDLE_FAVORITE", payload: user })}
-        >
-          <FavoriteIcon
-          // color={
-          //   favs.some((fav) => fav.id === user.id) ? "error" : "disabled"
-          // }
-          />
-        </IconButton>
-        <Link to={`/dentist/${data.id}`}>
-          <Button variant="contained">Ver detalle</Button>
-        </Link>
-      </CardActions> */}
     </div>
   );
 };

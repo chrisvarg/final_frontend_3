@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./dentistDetail.scss";
+import { GlobalContext } from "../../../Context/GlobalContext";
 
-export const Dentist = ({ dentist }) => {
+export const DentistDetail = ({ dentist }) => {
+  const { state } = useContext(GlobalContext);
+
   return (
-    <div className="dentist">
+    <div className={state.isDark ? "dentist dark" : "dentist"}>
       <div className="dentist__container">
         <h1 className="dentist__title">Detalles del Odontologo</h1>
 

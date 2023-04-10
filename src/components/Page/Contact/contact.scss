@@ -25,6 +25,7 @@
   &__title {
     font-size: 3.2rem;
     text-align: center;
+    color: black;
     @include breakpoint(md) {
       font-size: 5rem;
     }
@@ -80,6 +81,17 @@
           color: black;
         }
       }
+    }
+  }
+  .dark {
+    background-color: #737373;
+
+    h1 {
+      color: white;
+    }
+
+    p {
+      color: white;
     }
   }
 }
