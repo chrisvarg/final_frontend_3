@@ -8,6 +8,7 @@ import { Welcome } from "./components/Page/Welcome/Welcome";
 import { Footer } from "./components/Layout/Footer/Footer";
 import { Layout } from "./components/Layout/Layout";
 import { GlobalContextProvider } from "./Context/GlobalContext";
+import { NotFound } from "./components/Page/NotFound";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             <Route path="/contacto" element={<ContactContainer />} />
             <Route path="/favs" element={<FavoritesContainer />} />
           </Route>
-          <Route path="*" element={<h1>Not Found</h1>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </GlobalContextProvider>
     </BrowserRouter>
