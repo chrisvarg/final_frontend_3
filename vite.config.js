@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import sass from "vite-plugin-sass";
+import sass from "vite-plugin-sass-dts";
 
 const sassPluginOptions = {
   // Incluye los archivos .scss y .sass

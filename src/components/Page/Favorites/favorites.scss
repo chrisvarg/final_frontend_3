@@ -1,11 +1,13 @@
 @import "../../../css/sass/base/mixins";
 
 .favorite {
+  height: 75vh;
   &__container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 3.2rem;
+
 
     @include breakpoint(md) {
       padding-top: 5rem;
@@ -40,9 +42,8 @@
     }
   }
 }
-.dark {
+.favorite.dark {
   background-color: #737373;
-
   h1 {
     color: white;
   }

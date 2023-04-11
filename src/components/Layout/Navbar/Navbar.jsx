@@ -53,16 +53,7 @@ export const Navbar = () => {
               Favoritos
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/favs"
-              className={({ isActive }) =>
-                isActive ? "active" : "navbar__menu"
-              }
-            >
-              Favoritos
-            </NavLink>
-          </li>
+          
           <li>
             <CustomizedSwitches handleChangeTheme={handleChangeTheme} />
           </li>

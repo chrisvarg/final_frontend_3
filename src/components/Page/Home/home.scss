@@ -6,6 +6,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 3.2rem;
+    padding-bottom:4rem;
 
     @include breakpoint(md) {
       padding-top: 5rem;
@@ -40,9 +41,8 @@
     }
   }
 }
-.dark {
+.home.dark {
   background-color: #737373;
-
   h1 {
     color: white;
   }
