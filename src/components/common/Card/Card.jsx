@@ -7,15 +7,12 @@ import { Link } from "react-router-dom";
 import { GlobalContext } from "../../../Context/GlobalContext";
 
 export const Card = ({ data, dispatch, favs }) => {
-  console.log(data);
 
   const selectFavorite = () => {
     return favs.some((fav) => fav.id === data.id)
       ? "https://res.cloudinary.com/dzaeoe16l/image/upload/v1681248114/favorite.svg"
       : `https://res.cloudinary.com/dzaeoe16l/image/upload/v1681248114/favorite_unselect.svg`;
     };
-
-  console.log(selectFavorite());
 
   return (
     <div className="card">

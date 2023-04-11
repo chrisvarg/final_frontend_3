@@ -6,7 +6,6 @@ import { GlobalContext } from "../../../Context/GlobalContext";
 export const Favorites = ({ favs, isDark }) => {
   const { state, dispatch } = useContext(GlobalContext);
 
-  console.log(favs);
   return (
     <div className={isDark ? "favorite dark" : "favorite"}>
       <div className="favorite__container">
