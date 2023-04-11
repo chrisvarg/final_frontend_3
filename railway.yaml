@@ -1,0 +1,12 @@
+env:
+  RAILWAY_APP_NAME: "nombre-del-proyecto"
+  RAILWAY_GITHUB_DEPLOYMENT: "true"
+build:
+  builder: "railway/static:1.0.0"
+  environment:
+    NODE_ENV: "production"
+  commands:
+    - npm install
+    - npm run build
+publish:
+  builder: "railway/heroku:20"
